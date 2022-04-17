@@ -30,3 +30,7 @@
 .bg-secundario {
     background-color: var(--primario);
 }
+
+.margin {
+    margin-top: 100px
+}
