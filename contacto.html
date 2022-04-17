@@ -43,42 +43,43 @@
       </div>
     </nav>
 <!-- navbar -->     
-<div class="container">
-    <div class="row">
-      <div class="col-12 col-md-8 mx-auto">
-        <div class="jumbotron">
-          <div class="row text-center">
-            <div class="text-center col-12">
-              <h2>Solicite ayuda o información</h2>
-            </div>
-            <div class="text-center col-12">
-              <!-- CONTACT FORM https://github.com/jonmbake/bootstrap3-contact-form -->
-              <form id="feedbackForm" class="text-center">
-                <div class="form-group">
-                  <label for="name">Nombre</label>
-                  <input type="text" class="form-control" id="name" name="nombre" placeholder="Nombre" aria-describedby="nameHelp">
-                  <span id="nameHelp" class="form-text text-muted" style="display: none;">Please enter your name.</span>
-                </div>
-                <div class="form-group">
-                  <label for="email">E-Mail</label>
-                  <input type="email" class="form-control" id="email" name="email" placeholder="Email" aria-describedby="emailHelp">
-                  <span id="emailHelp" class="form-text text-muted" style="display: none;">Please enter a valid e-mail address.</span>
-                </div>
-                <div class="form-group">
-                  <label for="Mensaje">Mensaje</label>
-                  <textarea rows="10" cols="100" class="form-control" id="mensaje" name="mensaje" placeholder="Mensaje" aria-describedby="messageHelp"></textarea>
-                  <span id="messageHelp" class="form-text text-muted" style="display: none;">Please enter a message.</span>
-                </div>
-                <button type="submit" id="feedbackSubmit" class="btn btn-primary btn-lg"> Enviar</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
+<!-- Nombres, Apellidos, teléfono, email, ciudad 
+de residencia) -->
+<div class="text-center mt-3">
+<h1>Contactanos</h1>
+</div>
+<div class="p-4 bg-primario w-50 mt-3 mb-2 container uso-completo">
+  <form class="row g-3">
+    <div>
+      <label for="inputEmail4" class="form-label">Nombres</label>
+      <input type="email" class="form-control" id="inputEmail4">
     </div>
+    <div>
+      <label for="inputPassword4" class="form-label">Apellidos</label>
+      <input type="password" class="form-control" id="inputPassword4">
+    </div>
+    <div>
+      <label for="inputAddress" class="form-label">Teléfono</label>
+      <input type="tel" class="form-control" id="inputAddress" placeholder="+56912345678">
+    </div>
+    <div>
+      <label for="inputAddress2" class="form-label">Email</label>
+      <input type="email" class="form-control" id="inputAddress2" placeholder="correo@dominio.com">
+    </div>
+    <div>
+      <label for="inputCity" class="form-label">Ciudad</label>
+      <input type="text" class="form-control" id="inputCity">
+    </div>
+    <div>
+      <button type="submit" class="btn btn-primary ">Enviar</button>
+    </div>
+  </form>
   </div>
+<div class="container text-center">
+  <h4>Un representante se contactara con usted a la brevedad</h4>
+</div>
 </body>
-<footer class="text-center bg-secundario text-light">
+<footer class="text-center bg-secundario text-light mt-4">
   <div class="container pt-3">
     <div class="row">
       <div class="col-12">

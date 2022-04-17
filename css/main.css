@@ -1,12 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 
 :root {
     --primario : #1F2572;
     --secundario: #CDEF77;
     --terciario: #B122CB;
 }
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
 .logo {
-    width: 100%;
+    width: 100%;   
     height: 10%;
 }
 .botton-line{
@@ -17,10 +21,13 @@
     .vertical{
         display: inline !important;
     }
+    .uso-completo {
+        width: 100% !important;
+    }
 }
 
 .bg-primario {
-    color: aliceblue;
+    color: var(--secundario);
     background: linear-gradient(to bottom right, var(--primario) 55%, var(--terciario));
     border-radius: 39px 39px 39px 39px;
     -moz-border-radius: 39px 39px 39px 39px;
@@ -29,4 +36,8 @@
 
 .bg-secundario {
     background-color: var(--primario);
+}
+
+.rounded-personalizado {
+    border-radius: 30px;
 }
