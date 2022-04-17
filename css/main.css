@@ -38,6 +38,11 @@ body {
     background-color: var(--primario);
 }
 
+<<<<<<< HEAD
 .rounded-personalizado {
     border-radius: 30px;
+=======
+.margin {
+    margin-top: 100px
+>>>>>>> a604d4341acc53a86fc31912d86269dad457a0b4
 }
