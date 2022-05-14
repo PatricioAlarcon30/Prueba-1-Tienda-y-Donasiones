@@ -17,4 +17,61 @@ $(document).ready(function () {
         form.classList.add('was-validated')
       }, false)
     })
+
+    $(document).ready(function() {
+      $('#logo').on('click', function() {
+        $("#central").load('../home.html');
+        return false;
+    });
+      $('#div-btn0').on('click', function() {
+        $('.navbar-nav li').removeClass('active');
+        $("#central").load('../home.html');
+        return false;
+    }); 
+  
+      $('#div-btn1').on('click', function() {
+          $('.navbar-nav li').removeClass('active');
+          $("#central").load('../tienda.html');
+          return false;
+      });
+  
+      $('#div-btn2').on('click', function() {
+          $('.navbar-nav li').removeClass('active');
+          $("#central").load('../nosotros.html');
+          return false;
+      });
+  
+      $('#div-btn3').on('click', function() {
+          $('.navbar-nav li').removeClass('active');
+          $("#central").load('../contacto.html');
+          return false;
+      });
+  
+      $('#div-btn4').on('click', function() {
+          $('.navbar-nav li').removeClass('active');
+          $("#central").load('../donaciones.html');
+          return false; 
+      });
+
+      //seccion para imagenes en carrusel, redireccionamiento sin cargar pagina 
+      $('#fotoTienda').on('click', function() {
+        $("#central").load('../tienda.html');
+        return false;
+    });
+
+    $('#fotoNosotros').on('click', function() {
+        $("#central").load('../nosotros.html');
+        return false;
+    });
+
+    $('#fotoContacto').on('click', function() {
+        $("#central").load('../contacto.html');
+        return false;
+    });
+
+    $('#fotoDona').on('click', function() {
+        $("#central").load('../donaciones.html');
+        return false;
+      });
+    });
 });
