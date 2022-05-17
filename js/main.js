@@ -145,7 +145,6 @@ $(document).ready(function () {
     }else{
       $("#Direccion").addClass("is-valid");
     }
-    console.log($("#regiones").val());
     if ($("#regiones").val() == "" || $("#regiones").val() == null ){
       event.preventDefault();
       $("#regiones").addClass("is-invalid");
@@ -166,12 +165,18 @@ $(document).ready(function () {
     }else{
       $("#comunas").addClass("is-valid");
     }
+
+    //Mensaje confirmando formulario completado en base a cantidad de elementos validos
+    let formValidos =  document.querySelectorAll(".is-valid");
+    if (formValidos.length == 7){
+      alert("Formulario completado con exito, pronto nos pondremos en contacto, Gracias!!")
+    }
   });
 
 
   //funcion para validar el email
   function validateEmail(email){
-    var caract = new RegExp(/^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/);
+    let caract = new RegExp(/^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/);
     if (caract.test(email) == false){
         return false;
     }else{
