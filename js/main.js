@@ -3,62 +3,76 @@ $(document).ready(function () {
 
 
   //cargar HTML siempre estando en el index
-    $(document).ready(function() {
-      $('#logo').on('click', function() {
-        $("#central").load('../home.html');
-        return false;
-    });
-      $('#div-btn0').on('click', function() {
-        $('.navbar-nav li').removeClass('active');
-        $("#central").load('../home.html');
-        return false;
-    }); 
-  
-      $('#div-btn1').on('click', function() {
-          $('.navbar-nav li').removeClass('active');
-          $("#central").load('../tienda.html');
-          return false;
-      });
-  
-      $('#div-btn2').on('click', function() {
-          $('.navbar-nav li').removeClass('active');
-          $("#central").load('../nosotros.html');
-          return false;
-      });
-  
-      $('#div-btn3').on('click', function() {
-          $('.navbar-nav li').removeClass('active');
-          $("#central").load('../contacto.html');
-          return false;
-      });
-  
-      $('#div-btn4').on('click', function() {
-          $('.navbar-nav li').removeClass('active');
-          $("#central").load('../donaciones.html');
-          return false; 
-      });
+$('#logo').on('click', function() {
+  $("#central").load('../home.html');
+  return false;
+});
+$('#div-btn0').on('click', function() {
+  $('.navbar-nav li').removeClass('active');
+  $("#central").load('../home.html');
+  return false;
+}); 
 
-      //seccion para imagenes en carrusel, redireccionamiento sin cargar pagina 
-      $('#fotoTienda').on('click', function() {
-        $("#central").load('../tienda.html');
-        return false;
-    });
+$('#div-btn1').on('click', function() {
+  $('.navbar-nav li').removeClass('active');
+  $("#central").load('../tienda.html');
+  return false;
+  });
 
-    $('#fotoNosotros').on('click', function() {
-        $("#central").load('../nosotros.html');
-        return false;
-    });
+$('#div-btn2').on('click', function() {
+  $('.navbar-nav li').removeClass('active');
+  $("#central").load('../nosotros.html');
+  return false;
+  });
 
-    $('#fotoContacto').on('click', function() {
-        $("#central").load('../contacto.html');
-        return false;
-    });
+$('#div-btn3').on('click', function() {
+  $('.navbar-nav li').removeClass('active');
+  $("#central").load('../contacto.html');
+  return false;
+  });
 
-    $('#fotoDona').on('click', function() {
-        $("#central").load('../donaciones.html');
-        return false;
-      });
-    });
+$('#div-btn4').on('click', function() {
+  $('.navbar-nav li').removeClass('active');
+  $("#central").load('../donaciones.html');
+  return false; 
+  });
+
+  //seccion para imagenes en carrusel, redireccionamiento sin cargar pagina 
+$('#fotoTienda').on('click', function() {
+  $("#central").load('../tienda.html');
+  return false;
+});
+
+$('#fotoNosotros').on('click', function() {
+  $("#central").load('../nosotros.html');
+  return false;
+});
+
+$('#fotoContacto').on('click', function() {
+  $("#central").load('../contacto.html');
+  return false;
+});
+
+$('#fotoDona').on('click', function() {
+  $("#central").load('../donaciones.html');
+  return false;
+});
+
+$('#gatos').on('click', function() {
+  $("#central").load('../Gatos.html');
+  return false;
+});
+
+$('#perros').on('click', function() {
+  $("#central").load('../Perros.html');
+  return false;
+});
+
+$('#mas').on('click', function() {
+  $("#central").load('../Mas...html');
+  return false;
+});
+    
 
     //Conexion para obtener los datos de comuna y regiones
     $.ajax({
