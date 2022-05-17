@@ -1,23 +1,8 @@
-// Example starter JavaScript for disabling form submissions if there are invalid fields
 $(document).ready(function () {
   'use strict'
 
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  var forms = document.querySelectorAll('.needs-validation')
 
-  // Loop over them and prevent submission
-  Array.prototype.slice.call(forms)
-    .forEach(function (form) {
-      form.addEventListener('submit', function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
-
-        form.classList.add('was-validated')
-      }, false)
-    })
-
+  //cargar HTML siempre estando en el index
     $(document).ready(function() {
       $('#logo').on('click', function() {
         $("#central").load('../home.html');
@@ -75,115 +60,123 @@ $(document).ready(function () {
       });
     });
 
-
-    //Regiones y comunas en duro
-
-    var RegionesYcomunas = {
-
-      "regiones": [{
-          "NombreRegion": "Arica y Parinacota",
-          "comunas": ["Arica", "Camarones", "Putre", "General Lagos"]
-      },
-        {
-          "NombreRegion": "Tarapacá",
-          "comunas": ["Iquique", "Alto Hospicio", "Pozo Almonte", "Camiña", "Colchane", "Huara", "Pica"]
-      },
-        {
-          "NombreRegion": "Antofagasta",
-          "comunas": ["Antofagasta", "Mejillones", "Sierra Gorda", "Taltal", "Calama", "Ollagüe", "San Pedro de Atacama", "Tocopilla", "María Elena"]
-      },
-        {
-          "NombreRegion": "Atacama",
-          "comunas": ["Copiapó", "Caldera", "Tierra Amarilla", "Chañaral", "Diego de Almagro", "Vallenar", "Alto del Carmen", "Freirina", "Huasco"]
-      },
-        {
-          "NombreRegion": "Coquimbo",
-          "comunas": ["La Serena", "Coquimbo", "Andacollo", "La Higuera", "Paiguano", "Vicuña", "Illapel", "Canela", "Los Vilos", "Salamanca", "Ovalle", "Combarbalá", "Monte Patria", "Punitaqui", "Río Hurtado"]
-      },
-        {
-          "NombreRegion": "Valparaíso",
-          "comunas": ["Valparaíso", "Casablanca", "Concón", "Juan Fernández", "Puchuncaví", "Quintero", "Viña del Mar", "Isla de Pascua", "Los Andes", "Calle Larga", "Rinconada", "San Esteban", "La Ligua", "Cabildo", "Papudo", "Petorca", "Zapallar", "Quillota", "Calera", "Hijuelas", "La Cruz", "Nogales", "San Antonio", "Algarrobo", "Cartagena", "El Quisco", "El Tabo", "Santo Domingo", "San Felipe", "Catemu", "Llaillay", "Panquehue", "Putaendo", "Santa María", "Quilpué", "Limache", "Olmué", "Villa Alemana"]
-      },
-        {
-          "NombreRegion": "Región del Libertador Gral. Bernardo O’Higgins",
-          "comunas": ["Rancagua", "Codegua", "Coinco", "Coltauco", "Doñihue", "Graneros", "Las Cabras", "Machalí", "Malloa", "Mostazal", "Olivar", "Peumo", "Pichidegua", "Quinta de Tilcoco", "Rengo", "Requínoa", "San Vicente", "Pichilemu", "La Estrella", "Litueche", "Marchihue", "Navidad", "Paredones", "San Fernando", "Chépica", "Chimbarongo", "Lolol", "Nancagua", "Palmilla", "Peralillo", "Placilla", "Pumanque", "Santa Cruz"]
-      },
-        {
-          "NombreRegion": "Región del Maule",
-          "comunas": ["Talca", "ConsVtución", "Curepto", "Empedrado", "Maule", "Pelarco", "Pencahue", "Río Claro", "San Clemente", "San Rafael", "Cauquenes", "Chanco", "Pelluhue", "Curicó", "Hualañé", "Licantén", "Molina", "Rauco", "Romeral", "Sagrada Familia", "Teno", "Vichuquén", "Linares", "Colbún", "Longaví", "Parral", "ReVro", "San Javier", "Villa Alegre", "Yerbas Buenas"]
-      },
-        {
-          "NombreRegion": "Región del Biobío",
-          "comunas": ["Concepción", "Coronel", "Chiguayante", "Florida", "Hualqui", "Lota", "Penco", "San Pedro de la Paz", "Santa Juana", "Talcahuano", "Tomé", "Hualpén", "Lebu", "Arauco", "Cañete", "Contulmo", "Curanilahue", "Los Álamos", "Tirúa", "Los Ángeles", "Antuco", "Cabrero", "Laja", "Mulchén", "Nacimiento", "Negrete", "Quilaco", "Quilleco", "San Rosendo", "Santa Bárbara", "Tucapel", "Yumbel", "Alto Biobío", "Chillán", "Bulnes", "Cobquecura", "Coelemu", "Coihueco", "Chillán Viejo", "El Carmen", "Ninhue", "Ñiquén", "Pemuco", "Pinto", "Portezuelo", "Quillón", "Quirihue", "Ránquil", "San Carlos", "San Fabián", "San Ignacio", "San Nicolás", "Treguaco", "Yungay"]
-      },
-        {
-          "NombreRegion": "Región de la Araucanía",
-          "comunas": ["Temuco", "Carahue", "Cunco", "Curarrehue", "Freire", "Galvarino", "Gorbea", "Lautaro", "Loncoche", "Melipeuco", "Nueva Imperial", "Padre las Casas", "Perquenco", "Pitrufquén", "Pucón", "Saavedra", "Teodoro Schmidt", "Toltén", "Vilcún", "Villarrica", "Cholchol", "Angol", "Collipulli", "Curacautín", "Ercilla", "Lonquimay", "Los Sauces", "Lumaco", "Purén", "Renaico", "Traiguén", "Victoria", ]
-      },
-        {
-          "NombreRegion": "Región de Los Ríos",
-          "comunas": ["Valdivia", "Corral", "Lanco", "Los Lagos", "Máfil", "Mariquina", "Paillaco", "Panguipulli", "La Unión", "Futrono", "Lago Ranco", "Río Bueno"]
-      },
-        {
-          "NombreRegion": "Región de Los Lagos",
-          "comunas": ["Puerto Montt", "Calbuco", "Cochamó", "Fresia", "FruVllar", "Los Muermos", "Llanquihue", "Maullín", "Puerto Varas", "Castro", "Ancud", "Chonchi", "Curaco de Vélez", "Dalcahue", "Puqueldón", "Queilén", "Quellón", "Quemchi", "Quinchao", "Osorno", "Puerto Octay", "Purranque", "Puyehue", "Río Negro", "San Juan de la Costa", "San Pablo", "Chaitén", "Futaleufú", "Hualaihué", "Palena"]
-      },
-        {
-          "NombreRegion": "Región Aisén del Gral. Carlos Ibáñez del Campo",
-          "comunas": ["Coihaique", "Lago Verde", "Aisén", "Cisnes", "Guaitecas", "Cochrane", "O’Higgins", "Tortel", "Chile Chico", "Río Ibáñez"]
-      },
-        {
-          "NombreRegion": "Región de Magallanes y de la AntárVca Chilena",
-          "comunas": ["Punta Arenas", "Laguna Blanca", "Río Verde", "San Gregorio", "Cabo de Hornos (Ex Navarino)", "AntárVca", "Porvenir", "Primavera", "Timaukel", "Natales", "Torres del Paine"]
-      },
-        {
-          "NombreRegion": "Región Metropolitana de Santiago",
-          "comunas": ["Cerrillos", "Cerro Navia", "Conchalí", "El Bosque", "Estación Central", "Huechuraba", "Independencia", "La Cisterna", "La Florida", "La Granja", "La Pintana", "La Reina", "Las Condes", "Lo Barnechea", "Lo Espejo", "Lo Prado", "Macul", "Maipú", "Ñuñoa", "Pedro Aguirre Cerda", "Peñalolén", "Providencia", "Pudahuel", "Quilicura", "Quinta Normal", "Recoleta", "Renca", "San Joaquín", "San Miguel", "San Ramón", "Vitacura", "Puente Alto", "Pirque", "San José de Maipo", "Colina", "Lampa", "TilVl", "San Bernardo", "Buin", "Calera de Tango", "Paine", "Melipilla", "Alhué", "Curacaví", "María Pinto", "San Pedro", "Talagante", "El Monte", "Isla de Maipo", "Padre Hurtado", "Peñaflor"]
-      }]
-    }
-    
-      var iRegion = 0;
-      var htmlRegion = '<option value="sin-region">Seleccione región</option><option value="sin-region">--</option>';
-      var htmlComunas = '<option value="sin-region">Seleccione comuna</option><option value="sin-region">--</option>';
-    
-      jQuery.each(RegionesYcomunas.regiones, function () {
-        htmlRegion = htmlRegion + '<option value="' + RegionesYcomunas.regiones[iRegion].NombreRegion + '">' + RegionesYcomunas.regiones[iRegion].NombreRegion + '</option>';
-        iRegion++;
+    //Conexion para obtener los datos de comuna y regiones
+    $.ajax({
+      type: 'GET',
+      url: 'https://apis.digital.gob.cl/dpa/regiones',
+      dataType: 'json',
+      success: function(data) {
+      let iRegion = 0;
+      let htmlRegion = '<option selected disabled value="sin-region">Seleccione región</option><option disabled value="sin-region">--</option>';
+      $.each(data, function () {
+          htmlRegion = htmlRegion + '<option value="' + data[iRegion].codigo + '">' + data[iRegion].nombre + '</option>';
+          iRegion++;
       });
-    
       $('#regiones').html(htmlRegion);
-      $('#comunas').html(htmlComunas);
-    
-      $('#regiones').change(function () {
-        var iRegiones = 0;
-        var valorRegion = $(this).val();
-        var htmlComuna = '<option value="sin-comuna">Seleccione comuna</option><option value="sin-comuna">--</option>';
-        jQuery.each(RegionesYcomunas.regiones, function () {
-          if (RegionesYcomunas.regiones[iRegiones].NombreRegion == valorRegion) {
-            var iComunas = 0;
-            jQuery.each(RegionesYcomunas.regiones[iRegiones].comunas, function () {
-              htmlComuna = htmlComuna + '<option value="' + RegionesYcomunas.regiones[iRegiones].comunas[iComunas] + '">' + RegionesYcomunas.regiones[iRegiones].comunas[iComunas] + '</option>';
-              iComunas++;
-            });
-          }
-          iRegiones++;
-        });
-        $('#comunas').html(htmlComuna);
+  
+      $("#regiones").change(function(){
+          let regionVal = $("#regiones").val();
+          console.log(regionVal);
+          $.ajax({
+              type: 'GET',
+              url: `https://apis.digital.gob.cl/dpa/regiones/${regionVal}/comunas`,
+              dataType: 'json',
+              success: function(data) {
+              let iComuna = 0;
+              let htmlComuna = '<option selected disabled value="sin-comuna">Seleccione región</option><option disabled value="sin-comuna">--</option>';
+              $.each(data, function () {
+                  htmlComuna = htmlComuna + '<option value="' + data[iComuna].nombre + '">' + data[iComuna].nombre + '</option>';
+                  iComuna++;
+              });
+              $('#comunas').html(htmlComuna);
+              }
+          });
       });
-      $('#comunas').change(function () {
-        if ($(this).val() == 'sin-region') {
-          alert('selecciones Región');
-        } else if ($(this).val() == 'sin-comuna') {
-          alert('selecciones Comuna');
-        }
+      }
+  });
+
+  //Seccion de validacion de formulario
+  $("#envio").on("click", function(){
+    if ($("#nombre").val() == ""){
+      event.preventDefault();
+      $("#nombre").addClass("is-invalid");
+      $("#nombre").change(function(){
+        $("#nombre").removeClass("is-invalid");
+        $("#nombre").addClass("is-valid");
       });
-      $('#regiones').change(function () {
-        if ($(this).val() == 'sin-region') {
-          alert('selecciones Región');
-        }
+    }else{
+      $("#nombre").addClass("is-valid");
+    }
+    if ($("#apellido").val() == ""){
+      event.preventDefault();
+      $("#apellido").addClass("is-invalid");
+      $("#apellido").change(function(){
+        $("#apellido").removeClass("is-invalid");
+        $("#apellido").addClass("is-valid");
       });
-      
-      $('#envio').on('click', function() {
-        alert("Se envio el formulario con exito")
-    });
+    }else{
+      $("#apellido").addClass("is-valid");
+    }
+    if ($("#tel").val() == "" || !$("#tel").val().includes("+569") || $("#tel").val().length < 12){
+      event.preventDefault();
+      $("#tel").addClass("is-invalid");
+      $("#tel").change(function(){
+        $("#tel").removeClass("is-invalid");
+      });
+    }else{
+      $("#tel").addClass("is-valid");
+    }
+    if ($("#email").val() == "" || !validateEmail($("#email").val()) ){
+      event.preventDefault();
+      $("#email").addClass("is-invalid");
+      $("#email").change(function(){
+        $("#email").removeClass("is-invalid");
+      });
+    }else{
+      $("#email").addClass("is-valid");
+    }
+    if ($("#Direccion").val() == ""){
+      event.preventDefault();
+      $("#Direccion").addClass("is-invalid");
+      $("#Direccion").change(function(){
+        $("#Direccion").removeClass("is-invalid");
+        $("#Direccion").addClass("is-valid");
+      });
+    }else{
+      $("#Direccion").addClass("is-valid");
+    }
+    console.log($("#regiones").val());
+    if ($("#regiones").val() == "" || $("#regiones").val() == null ){
+      event.preventDefault();
+      $("#regiones").addClass("is-invalid");
+      $("#regiones").change(function(){
+        $("#regiones").removeClass("is-invalid");
+        $("#regiones").addClass("is-valid");
+      });
+    }else{
+      $("#regiones").addClass("is-valid");
+    }
+    if ($("#comunas").val() == "" || $("#comunas").val() == null ){
+      event.preventDefault();
+      $("#comunas").addClass("is-invalid");
+      $("#comunas").change(function(){
+        $("#comunas").removeClass("is-invalid");
+        $("#comunas").addClass("is-valid");
+      });
+    }else{
+      $("#comunas").addClass("is-valid");
+    }
+  });
+
+
+  //funcion para validar el email
+  function validateEmail(email){
+    var caract = new RegExp(/^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/);
+    if (caract.test(email) == false){
+        return false;
+    }else{
+        return true;
+    }
+}
 });
+
